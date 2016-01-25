@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<body ng-app="ApplicationModule">
+    <br />
+    <br />
+    <br />  
+    <div>
+        <div>
+            <div>
+                <table align="center">
+                    <tr>
+                        <td class="btn btn-default" Width="180px"><a href="showemployees"> Show Employees </a></td>
+                        <td class="btn btn-default" Width="180px"><a href="addemployee"> Add Employee </a></td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <div ng-view></div>
+            </div>
+        </div>
+    </div>
+     
+</body>
+
+
+@section scripts{
+  <script type="text/javascript" src="@Url.Content("~/Scripts/angular.js")"></script>   
+  <script type="text/javascript" src="@Url.Content("~/Scripts/angular-route.min.js")"></script>   
+  <script type="text/javascript" src="@Url.Content("~/MyScripts/Module.js")"></script>
+<script src="~/MyScripts/Services.js"></script>
+  <script type="text/javascript" src="@Url.Content("~/MyScripts/ShowEmployeesController.js")"></script> 
+  <script type="text/javascript" src="@Url.Content("~/MyScripts/AddEmpController.js")"></script> 
+    <script type="text/javascript" src="@Url.Content("~/MyScripts/EditEmployeeController.js")"></script> 
+    <script type="text/javascript" src="@Url.Content("~/MyScripts/DeleteEmployeeController.js")"></script>   
+ }
+
